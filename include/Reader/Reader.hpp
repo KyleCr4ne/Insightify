@@ -7,6 +7,7 @@
 
 namespace Insightidy {
     namespace Reader {
+
         template <typename T>
         class ReadFile {
             public:
@@ -17,5 +18,6 @@ namespace Insightidy {
             void readCSV(const std::string &filename, bool hasHeader);
             ~ReaFile() {};
         };
+        
     }
 }

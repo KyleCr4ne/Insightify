@@ -3,6 +3,7 @@
 
 namespace Insightidy {
     namespace Reader {
+
         template <typename T>
         void ReadFile<T>::readCSV(const std::string &filename, bool hasHeader) {
             std::ifstream file(filename);
@@ -30,5 +31,6 @@ namespace Insightidy {
                 }
             }
         }
+        
     }
 }
