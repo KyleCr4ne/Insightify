@@ -2,6 +2,7 @@
 
 namespace Insightify {
     namespace LinearAlgebra {
+
         template <typename T>
         T vectorScalarProduct(const std::vector<T> &vec1, const std::vector<T> &vec2) {
             if (vec1.size() != vec2.size()) {
@@ -25,5 +26,6 @@ namespace Insightify {
             }
             return product;
         }
+        
     }
 }
