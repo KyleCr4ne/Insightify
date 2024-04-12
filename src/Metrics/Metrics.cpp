@@ -2,6 +2,7 @@
 
 namespace Insightify {
     namespace Metrics {
+
         template <typename T>
         T meanSquaredError(const std::vector<T> &targetValue, const std::vector<T> &receivedValue) {
             if (targetValue.size() != receivedValue.size()) {
@@ -42,5 +43,6 @@ namespace Insightify {
         T sigmoid(const T x) {
             return 1 / (1 + std::exp(-x));
         }
+        
     }
 }

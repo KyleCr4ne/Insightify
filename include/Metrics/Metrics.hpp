@@ -4,6 +4,7 @@
 
 namespace Insightify {
     namespace Metrics {
+
         template <typename T>
         T meanSquaredError(const std::vector<T> &targetValue, const std::vector<T> &receivedValue);
 
@@ -15,5 +16,6 @@ namespace Insightify {
 
         template <typename T>
         T sigmoid(const T x);
+        
     }
 }
