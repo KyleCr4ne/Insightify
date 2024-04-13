@@ -36,13 +36,13 @@ namespace Insightify {
             for (size_t i = 0; i < targetValue.size(); ++i) {
                 logDiff += targetValue[i] * std::log(receivedValue[i]) + (1 - targetValue[i]) * std::log(1 - receivedValue[i]);
             }
-            return logDiff / targetValue.size();
+            return  - logDiff / targetValue.size();
         }
 
         template <typename T>
         T sigmoid(const T x) {
             return 1 / (1 + std::exp(-x));
         }
-        
+
     }
 }
