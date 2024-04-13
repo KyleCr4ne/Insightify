@@ -42,7 +42,7 @@
  ### Описание классов и функций
 
 
-**[Insightify::Metrics meanSquaredError](#mean-squared-error)**
+### [Insightify::Metrics meanSquaredError](#mean-squared-error)
 
 - Функция высчитывает среднюю квадратичную ошибку
 - Шаблон функции:
@@ -54,7 +54,7 @@ T meanSquaredError(const std::vector<T> &targetValue, const std::vector<T> &rece
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
-**[Insightify::Metrics meanAbsoluteError](#mean-absoute-error)**
+ ### [Insightify::Metrics meanAbsoluteError](#mean-absoute-error)
 
 - Функция высчитывает среднюю абсолютную ошибку
 - Шаблон функции:
@@ -66,7 +66,7 @@ T meanAbsoluteError(const std::vector<T> &targetValue, const std::vector<T> &rec
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
-**[Insightify::Metrics sigmoidCrossEntropyLoss](#sigmoid-cross-entropy-loss)**
+### [Insightify::Metrics sigmoidCrossEntropyLoss](#sigmoid-cross-entropy-loss) 
 
 - Функция высчитывает сигмоидную кросс-энтропию (ошибку между истинными метками класса и предсказанными)
 - Шаблон функции:
@@ -78,7 +78,7 @@ T sigmoidCrossEntropyLoss(const std::vector<T> &targetValue, const std::vector<T
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
-**[Insightify::Metrics sigmoid](#sigmoid)**
+### [Insightify::Metrics sigmoid](#sigmoid) 
 
 - Функция высчитывает значение сигмоиды для числа
 - Шаблон функции:
@@ -90,7 +90,7 @@ T sigmoidCrossEntropyLoss(const std::vector<T> &targetValue, const std::vector<T
 - Функция принимает число и возвращает число
 
 
-**[Insightify::LinearAlgebra vectorScalarProduct](#vector-scalar-product)**
+### [Insightify::LinearAlgebra vectorScalarProduct](#vector-scalar-product)
 
 - Функция высчитывает скалярное произведение векторов
 - Шаблон функции:
@@ -102,7 +102,7 @@ T vectorScalarProduct(const std::vector<T> &vec1, const std::vector<T> &vec2);
 - Функция принимает два вектора и возвращает число
 
 
-**[Insightify::LinearAlgebra multiplyMatrixByWeights](#multiply-matrix-by-weights)**
+### [Insightify::LinearAlgebra multiplyMatrixByWeights](#multiply-matrix-by-weights) 
 
 - Функция высчитывает результат произведения матрица A на транспонированный вектор весов w: A x w
 - Шаблон функции:
@@ -114,7 +114,7 @@ std::vector<T> multiplyMatrixByWeights(const std::vector<std::vector<T>> &matrix
 - Функция принимает матрицу и вектор и возвращает вектор, где каждый элемент это соответственное скалярное произведение признаков объектво на данный набор весов 
 
 
-**[Insightify::Reader::ReadFile](#read-file)**
+### [Insightify::Reader::ReadFile](#read-file) 
 
 - Базовый класс для чтения файлов. Конструктор класса не содержит параметров.
 
