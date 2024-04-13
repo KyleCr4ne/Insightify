@@ -42,7 +42,7 @@
  ### Описание классов и функций
 
 
-##  [Insightify::Metrics meanSquaredError](#mean-squared-error)
+### [Insightify::Metrics meanSquaredError](#mean-squared-error)  
 
 - Функция высчитывает среднюю квадратичную ошибку
 - Шаблон функции:
@@ -54,7 +54,7 @@ T meanSquaredError(const std::vector<T> &targetValue, const std::vector<T> &rece
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
- ### [Insightify::Metrics meanAbsoluteError](#mean-absoute-error)
+ ### [Insightify::Metrics meanAbsoluteError](#mean-absolute-error)
 
 - Функция высчитывает среднюю абсолютную ошибку
 - Шаблон функции:
