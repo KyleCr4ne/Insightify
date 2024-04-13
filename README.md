@@ -42,7 +42,7 @@
  ### Описание классов и функций
 
 
-### [Insightify::Metrics meanSquaredError](#mean-squared-error)
+##  [Insightify::Metrics meanSquaredError](#mean-squared-error)
 
 - Функция высчитывает среднюю квадратичную ошибку
 - Шаблон функции:
