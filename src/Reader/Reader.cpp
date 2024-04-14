@@ -1,7 +1,7 @@
 #include "./../../include/Reader/Reader.hpp"
 
 
-namespace Insightidy {
+namespace Insightify {
     namespace Reader {
 
         template <typename T>

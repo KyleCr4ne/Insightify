@@ -5,7 +5,7 @@
 #include <string>
 
 
-namespace Insightidy {
+namespace Insightify {
     namespace Reader {
 
         template <typename T>
