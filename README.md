@@ -21,7 +21,7 @@
 
 - [Insightify::Metrics meanSquaredError](#insightifymetrics-meansquarederror)
 - [Insightify::Metrics meanAbsoluteError](#insightifymetrics-meanabsoluteerror)
-- [Insightify::Metrics sigmoidCrossEntropyLoss](insightifymetrics-sigmoidcrossentropyloss)
+- [Insightify::Metrics sigmoidCrossEntropyLoss](#insightifymetrics-sigmoidcrossentropyloss)
 - [Insightify::Metrics sigmoid](#insightifymetrics-sigmoid)
 
 
@@ -71,7 +71,7 @@ T meanAbsoluteError(const std::vector<T> &targetValue, const std::vector<T> &rec
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
-## Insightify::Metrics sigmoidCrossEntropyLoss[](insightifymetrics-sigmoidcrossentropyloss) 
+## Insightify::Metrics sigmoidCrossEntropyLoss[](#insightifymetrics-sigmoidcrossentropyloss) 
 
 - Функция высчитывает сигмоидную кросс-энтропию (ошибку между истинными метками класса и предсказанными)
 - Шаблон функции:
