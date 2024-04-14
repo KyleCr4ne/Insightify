@@ -19,7 +19,7 @@
 ## Insightify::Metrics
 
 
-- [Insightify::Metrics meanSquaredError](#meanSquaredError)
+- [Insightify::Metrics meanSquaredError](#meansquarederror)
 - [Insightify::Metrics meanAbsoluteError](#Insightify::Metrics-meanAbsoluteError)
 - [Insightify::Metrics sigmoidCrossEntropyLoss](Insightify::Metrics-sigmoidCrossEntropyLoss)
 - [Insightify::Metrics sigmoid](#Insightify::Metrics-sigmoid)
@@ -47,7 +47,7 @@
 ## Описание классов и функций
 
 
-## Insightify::Metrics meanSquaredError[](#meanSquaredError)  
+## Insightify::Metrics meanSquaredError[](#meansquarederror)  
 
 - Функция высчитывает среднюю квадратичную ошибку
 - Шаблон функции:
