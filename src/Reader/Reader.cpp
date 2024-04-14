@@ -7,6 +7,10 @@ namespace Insightify {
         template <typename T>
         void ReadFile<T>::readCSV(const std::string &filename, bool hasHeader) {
             std::ifstream file(filename);
+            if (!file.is_open()) {
+                std::cerr << "Error: Unable to open file " << filename << std::endl;
+                return;
+            }
 
             std::vector<std::vector<T>> data;
             std::vector<T> target;

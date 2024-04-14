@@ -16,7 +16,7 @@ namespace Insightify {
             std::vector<std::string> Header;
             ReadFile() {};
             void readCSV(const std::string &filename, bool hasHeader);
-            ~ReaFile() {};
+            ~ReadFile() {};
         };
         
     }
