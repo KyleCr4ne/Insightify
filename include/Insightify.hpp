@@ -7,3 +7,4 @@
 #include "./Optimizers/Optimizers.hpp"
 #include "./PreprocessingData/PreprocessingData.hpp"
 #include "./Reader/Reader.hpp"
+#include "./Writer/Writer.hpp"
