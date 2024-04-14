@@ -27,4 +27,5 @@ int main() {
     for (const auto &target : Y) {
         std::cout << target << std::endl;
     }
+    return 0;
 }
