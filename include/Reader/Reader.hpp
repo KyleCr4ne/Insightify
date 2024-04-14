@@ -3,7 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
-
+#include <iostream>
 
 namespace Insightify {
     namespace Reader {

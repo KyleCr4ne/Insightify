@@ -3,7 +3,6 @@
 
 namespace Insightify {
     namespace Reader {
-
         template <typename T>
         void ReadFile<T>::readCSV(const std::string &filename, bool hasHeader) {
             std::ifstream file(filename);
@@ -11,9 +10,6 @@ namespace Insightify {
                 std::cerr << "Error: Unable to open file " << filename << std::endl;
                 return;
             }
-
-            std::vector<std::vector<T>> data;
-            std::vector<T> target;
 
             std::string line;
 
@@ -29,7 +25,7 @@ namespace Insightify {
                         hasHeader = false;
                         continue;
                     } 
-                    target.push_back(row.back());
+                    targetValues.push_back(row.back());
                     row.pop_back();
                     data.push_back(row);
                 }
