@@ -19,35 +19,35 @@
 ## Insightify::Metrics
 
 
-- [Insightify::Metrics meanSquaredError](#meansquarederror)
-- [Insightify::Metrics meanAbsoluteError](#Insightify::Metrics-meanAbsoluteError)
-- [Insightify::Metrics sigmoidCrossEntropyLoss](Insightify::Metrics-sigmoidCrossEntropyLoss)
-- [Insightify::Metrics sigmoid](#Insightify::Metrics-sigmoid)
+- [Insightify::Metrics meanSquaredError](#insightifymetrics-meansquarederror)
+- [Insightify::Metrics meanAbsoluteError](#insightifymetrics-meanabsoluteerror)
+- [Insightify::Metrics sigmoidCrossEntropyLoss](insightifymetrics-sigmoidcrossentropyloss)
+- [Insightify::Metrics sigmoid](#insightifymetrics-sigmoid)
 
 
 ## Insightify::LinearAlgebra
 
 
-- [Insightify::LinearAlgebra vectorScalarProduct](#Insightify::LinearAlgebra-vectorScalarProduct)
-- [Insightify::LinearAlgebra multiplyMatrixByWeights](#Insightify::LinearAlgebra-multiplyMatrixByWeights)
+- [Insightify::LinearAlgebra vectorScalarProduct](#insightifylinearalgebra-vectorscalarproduct)
+- [Insightify::LinearAlgebra multiplyMatrixByWeights](#insightifylinearalgebra-multiplymatrixbyweights)
 
 
 ## Insightify::Reader
 
 
-- [Insightify::Reader::ReadFile](#insightify::reader::readfile)
+- [Insightify::Reader::ReadFile](#insightifyreaderreadfile)
 
 
 ## Insightify::Writer
 
 
-- [Insightify::Writer::WriteFile](#insightify::writer::writefile)
+- [Insightify::Writer::WriteFile](#insightifywriterwritefile)
 
 
 ## Описание классов и функций
 
 
-## Insightify::Metrics meanSquaredError[](#meansquarederror)  
+## Insightify::Metrics meanSquaredError[](#insightifymetrics-meansquarederror)  
 
 - Функция высчитывает среднюю квадратичную ошибку
 - Шаблон функции:
@@ -59,7 +59,7 @@ T meanSquaredError(const std::vector<T> &targetValue, const std::vector<T> &rece
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
- ## [Insightify::Metrics meanAbsoluteError](#Insightify::Metrics-meanAbsoluteError)
+ ## [Insightify::Metrics meanAbsoluteError](#insightifymetrics-meanabsoluteerror)
 
 - Функция высчитывает среднюю абсолютную ошибку
 - Шаблон функции:
@@ -71,7 +71,7 @@ T meanAbsoluteError(const std::vector<T> &targetValue, const std::vector<T> &rec
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
-## [Insightify::Metrics sigmoidCrossEntropyLoss](#Insightify::Metrics-sigmoidCrossEntropyLoss) 
+## [Insightify::Metrics sigmoidCrossEntropyLoss](insightifymetrics-sigmoidcrossentropyloss) 
 
 - Функция высчитывает сигмоидную кросс-энтропию (ошибку между истинными метками класса и предсказанными)
 - Шаблон функции:
@@ -83,7 +83,7 @@ T sigmoidCrossEntropyLoss(const std::vector<T> &targetValue, const std::vector<T
 - Функция принимает два вектора одинаковой размерности и возвращает число
 
 
-## [Insightify::Metrics sigmoid](#Insightify::Metrics-sigmoid) 
+## [Insightify::Metrics sigmoid](#insightifymetrics-sigmoid) 
 
 - Функция высчитывает значение сигмоиды для числа
 - Шаблон функции:
@@ -95,7 +95,7 @@ T sigmoidCrossEntropyLoss(const std::vector<T> &targetValue, const std::vector<T
 - Функция принимает число и возвращает число
 
 
-## [Insightify::LinearAlgebra vectorScalarProduct](#Insightify::LinearAlgebra-vectorScalarProduct)
+## [Insightify::LinearAlgebra vectorScalarProduct](#insightifylinearalgebra-vectorscalarproduct)
 
 - Функция высчитывает скалярное произведение векторов
 - Шаблон функции:
@@ -107,7 +107,7 @@ T vectorScalarProduct(const std::vector<T> &vec1, const std::vector<T> &vec2);
 - Функция принимает два вектора и возвращает число
 
 
-## [Insightify::LinearAlgebra multiplyMatrixByWeights](#Insightify::LinearAlgebra-multiplyMatrixByWeights) 
+## [Insightify::LinearAlgebra multiplyMatrixByWeights](#insightifylinearalgebra-multiplymatrixbyweights) 
 
 - Функция высчитывает результат произведения матрица A на транспонированный вектор весов w: $A \times w$
 - Шаблон функции:
@@ -119,7 +119,7 @@ std::vector<T> multiplyMatrixByWeights(const std::vector<std::vector<T>> &matrix
 - Функция принимает матрицу и вектор и возвращает вектор, где каждый элемент это соответственное скалярное произведение признаков объектво на данный набор весов 
 
 
-## [Insightify::Reader::ReadFile](#insightify::reader::readfile) 
+## [Insightify::Reader::ReadFile](#insightifyreaderreadfile) 
 
 - Базовый класс для чтения файлов. Конструктор класса не содержит параметров.
 
@@ -139,7 +139,7 @@ Reader.readCSV("example.csv", true);
 
 - [Пример](tests/test_Reader)
 
-## [Insightify::Writer::WriteFile](#insightify::writer::writefile)
+## [Insightify::Writer::WriteFile](#insightifywriterwritefile)
 
 - Базовый класс для записи данных в файл. Конструктор класса не содержит параметров.
 
