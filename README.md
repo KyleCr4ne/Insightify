@@ -38,6 +38,12 @@
 - [Insightify::Reader::ReadFile](#read-file)
 
 
+## Insightify::Writer
+
+
+- [Insightify::Writer::WriteFile](#insightify-writer-writefilee)
+
+
 ## Описание классов и функций
 
 
@@ -121,13 +127,31 @@ std::vector<T> multiplyMatrixByWeights(const std::vector<std::vector<T>> &matrix
 Insightify::Reader::ReadFile Reader;
 ```
 
-- Содержит метод ReadCSV, необходимый для чтения данных из CSV файла:
+- Содержит метод readCSV, необходимый для чтения данных из CSV файла:
 
 ```cpp
 // void readCSV(const std::string &filename, bool hasHeader);
 
-Reader.readCSV("example.csv", True);
+Reader.readCSV("example.csv", true);
 ```
 
 - Принимает на вход путь к файлу, а также флаг наличия заголовка в файле. После записывает матрицу признаков в публичное поле матрицу data, а целевые значения (последний столбец в файле) - в вектор targetValues
 
+
+## [Insightify::Writer::WriteFile](#insightify-writer-writefile)
+
+- Базовый класс для записи данных в файл. Конструктор класса не содержит параметров.
+
+```cpp
+Insightify::Writer::WriteFile Writer;
+```
+
+- Содержит метод writeCSV, необходимый для записи данных в файл формата CSV:
+
+```cpp
+// void writeCSV(const std::string &filename, const std::vector<T> &values, bool hasIdx);
+
+Writer.writeCSV("example.csv", outputValues, true);
+```
+
+- Принимает на вход путь к файлу, указатель на одномерный вектор значений и флаг необходимости указывать в выходном файле индексы данных. 
