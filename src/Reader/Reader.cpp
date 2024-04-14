@@ -34,6 +34,7 @@ namespace Insightify {
                     data.push_back(row);
                 }
             }
+            file.close();
         }
         
     }
