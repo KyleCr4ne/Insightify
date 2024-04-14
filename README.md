@@ -137,6 +137,7 @@ Reader.readCSV("example.csv", true);
 
 - Принимает на вход путь к файлу, а также флаг наличия заголовка в файле. После записывает матрицу признаков в публичное поле матрицу data, а целевые значения (последний столбец в файле) - в вектор targetValues
 
+- [Пример](tests/test_Reader)
 
 ## [Insightify::Writer::WriteFile](#insightify::writer::writefile)
 
