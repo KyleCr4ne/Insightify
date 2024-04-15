@@ -182,11 +182,11 @@ std::pair<std::vector<T>, T> MSELossGradient(const std::vector<T> &sample, const
 
 - Функция принимает значения признаков сэмпла, целевое значение сэмпла, текущий вектор весов, значение поля смещения, а также тип регуляризации (L1/L2) и ее вес.
 
-- [Insightify::LossGradients MAELossGradient](#insightifylossgradients-maelossgradient)
+## Insightify::LossGradients MAELossGradient[](#insightifylossgradients-maelossgradient)
 
 - Функция высчитывает градиент MAE для определенного объекта из выборки по весам линейной модели.
 
- $$Loss(w, x_i |y_i) = |w_0 + w_1x_1 + .. + w_nx_n - y_i|^2$$
+ $$Loss(w, x_i |y_i) = |w_0 + w_1x_1 + .. + w_nx_n - y_i|$$
  $$\frac{dLoss}{dw_k} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i) * x_{ik}$$
  $$\frac{dLoss}{dw_0} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i)$$
 
@@ -199,7 +199,7 @@ std::pair<std::vector<T>, T> MAELossGradient(const std::vector<T> &sample, const
 
 - Функция принимает значения признаков сэмпла, целевое значение сэмпла, текущий вектор весов, значение поля смещения, а также тип регуляризации (L1/L2) и ее вес.
 
-- [Insightify::LossGradients LogLossGradient](#insightifylossgradients-loglossgradient)
+## Insightify::LossGradients LogLossGradient[](#insightifylossgradients-loglossgradient)
 
 - Функция высчитывает градиент LogLoss для определенного объекта из выборки по весам линейной модели. Log Loss рассматривается в плане бинарной классификации для меток классов 0 или 1.
 
