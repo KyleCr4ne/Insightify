@@ -44,6 +44,13 @@
 - [Insightify::Writer::WriteFile](#insightifywriterwritefile)
 
 
+## Insightify::LossGradients
+
+- [Insightify::LossGradients MSELossGradient](#insightifylossgradients-mselossgradient)
+- [Insightify::LossGradients MAELossGradient](#insightifylossgradients-maelossgradient)
+- [Insightify::LossGradients LogLossGradient](#insightifylossgradients-loglossgradient)
+
+
 ## Описание классов и функций
 
 
@@ -158,3 +165,22 @@ Writer.writeCSV("example.csv", outputValues, true);
 - Принимает на вход путь к файлу, указатель на одномерный вектор значений и флаг необходимости указывать в выходном файле индексы данных. 
 
 - [Пример](tests/test_Writer)
+
+## Insightify::LossGradients MSELossGradient[](#insightifylossgradients-mselossgradient)
+
+- Функция высчитывает градиент MSE для определенного объекта из выборки по весам линейной модели.
+ $$Loss(w, x_i |y_i) = (w_0 + w_1x_1 + .. + w_nx_n - y_i)^2$$
+ $$\frac{dLoss}{w_k} = 2 * (w_0 + w_1x_1 + .. + w_nx_n - y_i) * x_{ik}$$
+ $$\frac{dLoss}{w_0} = 2 * (w_0 + w_1x_1 + .. + w_nx_n - y_i)$$
+
+ - Шаблон функции:
+
+ ```cpp
+std::pair<std::vector<T>, T> MSELossGradient(const std::vector<T> &sample, const T y, const std::vector<T> &weights, 
+        const T bias, const std::string Regularization, const T RegularizationCoef)
+```
+
+- Функция принимает значения признаков сэмпла, целевое значение сэмпла, текущий вектор весов, значение поля смещения, а также тип регуляризации (L1/L2) и ее вес.
+
+- [Insightify::LossGradients MAELossGradient](#insightifylossgradients-maelossgradient)
+- [Insightify::LossGradients LogLossGradient](#insightifylossgradients-loglossgradient)
