@@ -201,7 +201,6 @@ std::pair<std::vector<T>, T> MAELossGradient(const std::vector<T> &sample, const
 ## Insightify::LossGradients LogLossGradient[](#insightifylossgradients-loglossgradient)
 
 - Функция высчитывает градиент LogLoss для определенного объекта из выборки по весам линейной модели. Log Loss рассматривается в плане бинарной классификации для меток классов 0 или 1.
-
 $$Loss(w, x_i |y_i) = -y_i \log \sigma(w_0 + w_1x_1 + .. + w_nx_n) - (1 - y_i) \log (1 - \sigma(w_0 + w_1x_1 + .. + w_nx_n))$$
 $$\frac{dLoss}{dw_k} = (\sigma(w_0 + w_1x_1 + .. + w_nx_n) - y_i) * x_{ik}$$
 $$\frac{dLoss}{dw_0} = (\sigma(w_0 + w_1x_1 + .. + w_nx_n) - y_i)$$
