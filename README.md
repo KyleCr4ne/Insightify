@@ -185,10 +185,9 @@ std::pair<std::vector<T>, T> MSELossGradient(const std::vector<T> &sample, const
 ## Insightify::LossGradients MAELossGradient[](#insightifylossgradients-maelossgradient)
 
 - Функция высчитывает градиент MAE для определенного объекта из выборки по весам линейной модели.
-
- $$Loss(w, x_i |y_i) = |w_0 + w_1x_1 + .. + w_nx_n - y_i|$$
- $$\frac{dLoss}{dw_k} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i) * x_{ik}$$
- $$\frac{dLoss}{dw_0} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i)$$
+$$Loss(w, x_i |y_i) = |w_0 + w_1x_1 + .. + w_nx_n - y_i|$$
+$$\frac{dLoss}{dw_k} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i) * x_{ik}$$
+$$\frac{dLoss}{dw_0} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i)$$
 
 - Шаблон функции:
 
