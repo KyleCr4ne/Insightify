@@ -170,17 +170,49 @@ Writer.writeCSV("example.csv", outputValues, true);
 
 - Функция высчитывает градиент MSE для определенного объекта из выборки по весам линейной модели.
  $$Loss(w, x_i |y_i) = (w_0 + w_1x_1 + .. + w_nx_n - y_i)^2$$
- $$\frac{dLoss}{w_k} = 2 * (w_0 + w_1x_1 + .. + w_nx_n - y_i) * x_{ik}$$
- $$\frac{dLoss}{w_0} = 2 * (w_0 + w_1x_1 + .. + w_nx_n - y_i)$$
+ $$\frac{dLoss}{dw_k} = 2 * (w_0 + w_1x_1 + .. + w_nx_n - y_i) * x_{ik}$$
+ $$\frac{dLoss}{dw_0} = 2 * (w_0 + w_1x_1 + .. + w_nx_n - y_i)$$
 
  - Шаблон функции:
 
  ```cpp
 std::pair<std::vector<T>, T> MSELossGradient(const std::vector<T> &sample, const T y, const std::vector<T> &weights, 
-        const T bias, const std::string Regularization, const T RegularizationCoef)
+        const T bias, const std::string Regularization, const T RegularizationCoef);
 ```
 
 - Функция принимает значения признаков сэмпла, целевое значение сэмпла, текущий вектор весов, значение поля смещения, а также тип регуляризации (L1/L2) и ее вес.
 
 - [Insightify::LossGradients MAELossGradient](#insightifylossgradients-maelossgradient)
+
+- Функция высчитывает градиент MAE для определенного объекта из выборки по весам линейной модели.
+
+ $$Loss(w, x_i |y_i) = |w_0 + w_1x_1 + .. + w_nx_n - y_i|^2$$
+ $$\frac{dLoss}{dw_k} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i) * x_{ik}$$
+ $$\frac{dLoss}{dw_0} = sign(w_0 + w_1x_1 + .. + w_nx_n - y_i)$$
+
+- Шаблон функции:
+
+ ```cpp
+std::pair<std::vector<T>, T> MAELossGradient(const std::vector<T> &sample, const T y, const std::vector<T> &weights, 
+        const T bias, const std::string Regularization, const T RegularizationCoef);
+```
+
+- Функция принимает значения признаков сэмпла, целевое значение сэмпла, текущий вектор весов, значение поля смещения, а также тип регуляризации (L1/L2) и ее вес.
+
 - [Insightify::LossGradients LogLossGradient](#insightifylossgradients-loglossgradient)
+
+- Функция высчитывает градиент LogLoss для определенного объекта из выборки по весам линейной модели. Log Loss рассматривается в плане бинарной классификации для меток классов 0 или 1.
+
+$$Loss(w, x_i |y_i) = -y_i \log \sigma(w_0 + w_1x_1 + .. + w_nx_n) - (1 - y_i) \log (1 - \sigma(w_0 + w_1x_1 + .. + w_nx_n))$$
+$$\frac{dLoss}{dw_k} = (\sigma(w_0 + w_1x_1 + .. + w_nx_n) - y_i) * x_{ik}$$
+$$\frac{dLoss}{dw_0} = (\sigma(w_0 + w_1x_1 + .. + w_nx_n) - y_i)$$
+
+- Шаблон функции:
+
+ ```cpp
+std::pair<std::vector<T>, T> LogLossGradient(const std::vector<T> &sample, const T y, const std::vector<T> &weights,
+        const T bias, const std::string Regularization, const T RegularizationCoef);
+```
+
+- Функция принимает значения признаков сэмпла, целевое значение сэмпла, текущий вектор весов, значение поля смещения, а также тип регуляризации (L1/L2) и ее вес.
+
